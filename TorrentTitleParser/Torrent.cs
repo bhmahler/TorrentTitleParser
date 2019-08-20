@@ -39,7 +39,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"xvid|x26[45]|h\.?26[45]|hevc", Options = RegexOptions.IgnoreCase)]
         public string Codec { get; set; }
 
-        [Pattern(Regex = @"MP3|DDP?\+?[57][\.\s]?1|Dual[\- ]Audio|LiNE|DTS(?:-?HD)?(?: ?MA)?(?:[\.\s]?[567][\.\s]?1)?|AAC(?:\.?2\.0)?|AC3(?:[\.\s]5[\.\s]1)?|ATMOS TrueHD(?:\s?7\s1)?")]
+        [Pattern(Regex = @"MP3|DDP?\+?[57][\.\s]?1|Dual[\- ]Audio|LiNE|D[Tt][Ss](?:-?6[Cc][Hh])?(?:-?HD)?(?: ?MA)?(?:[\.\s]?[567][\.\s]?1)?|AAC(?:\.?2\.0)?|AC3(?:[\.\s]5[\.\s]1)?|ATMOS TrueHD(?:\s?7\s1)?")]
         public string Audio { get; set; }
 
         [Pattern(Regex = @"(- ?(?:.+\])?([^-\[]+)(?:\[.+\])?)$", AlternateRegex = @"(([A-Za-z0-9]+))$")]

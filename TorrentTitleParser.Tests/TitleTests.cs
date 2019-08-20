@@ -43,6 +43,15 @@ namespace TorrentTitleParser.Tests
             Assert.AreEqual("H264", torrent.Codec);
             Assert.AreEqual("AC3", torrent.Audio);
             Assert.AreEqual("EVO", torrent.Group);
+
+            torrent = new Torrent("A Few Good Men 1992 BluRay 1080p Dts-6Ch H264-PiR8");
+            Assert.AreEqual("A Few Good Men", torrent.Title);
+            Assert.AreEqual(1992, torrent.Year);
+            Assert.AreEqual("1080p", torrent.Resolution);
+            Assert.AreEqual("BluRay", torrent.Quality);
+            Assert.AreEqual("H264", torrent.Codec);
+            Assert.AreEqual("Dts-6Ch", torrent.Audio);
+            Assert.AreEqual("PiR8", torrent.Group);
         }
 
         [TestMethod]
