@@ -1,0 +1,17 @@
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.Tests.deps.json
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.Tests.runtimeconfig.json
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.Tests.runtimeconfig.dev.json
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.Tests.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.Tests.pdb
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\bin\Debug\netcoreapp2.1\TorrentTitleParser.pdb
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.csprojAssemblyReference.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.csproj.CoreCompileInputs.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.AssemblyInfoInputs.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.AssemblyInfo.cs
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.csproj.CopyComplete
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser.Tests\obj\Debug\netcoreapp2.1\TorrentTitleParser.Tests.pdb

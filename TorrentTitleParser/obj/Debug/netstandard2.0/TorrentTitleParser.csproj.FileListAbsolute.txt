@@ -1,0 +1,9 @@
+C:\GIT\TorrentTitleParser\TorrentTitleParser\bin\Debug\netstandard2.0\TorrentTitleParser.deps.json
+C:\GIT\TorrentTitleParser\TorrentTitleParser\bin\Debug\netstandard2.0\TorrentTitleParser.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser\bin\Debug\netstandard2.0\TorrentTitleParser.pdb
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.csprojAssemblyReference.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.csproj.CoreCompileInputs.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.AssemblyInfoInputs.cache
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.AssemblyInfo.cs
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.dll
+C:\GIT\TorrentTitleParser\TorrentTitleParser\obj\Debug\netstandard2.0\TorrentTitleParser.pdb
