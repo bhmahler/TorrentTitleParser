@@ -1,5 +1,5 @@
 cd TorrentTitleParser/bin/Release/
-file="$(find -type f printf %f\\n -name *.nupkg)"
+file="$(find -type f -name *.nupkg printf %f\\n)"
 echo $file
 version=$(echo $file | grep -o -E '[0-9]\.[0-9]\.[0-9]')
 echo $version
