@@ -3,7 +3,9 @@ file="$(find ./ -type f -name *.nupkg -printf "%f")"
 echo $file
 version=$(echo $file | grep -o -E '[0-9]\.[0-9]\.[0-9]')
 echo "Found version $version for publish, checking nuget.org..."
-url="https://globalcdn.nuget.org/packages/$file"
+lower=$(echo "$file" | tr '[:upper:]' '[:lower:]')
+url="https://globalcdn.nuget.org/packages/$lower"
+echo $url
 status=$(curl -o /dev/null -Isw '%{http_code}\n' $url)
 if $status=200; then
 	echo "Version $version already found, skipping publish"
