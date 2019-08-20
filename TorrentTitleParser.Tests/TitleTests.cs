@@ -34,6 +34,15 @@ namespace TorrentTitleParser.Tests
             Assert.AreEqual("HDRip", torrent.Quality);
             Assert.AreEqual("X264", torrent.Codec);
             Assert.AreEqual("EVO", torrent.Group);
+
+            torrent = new Torrent("Men in Black International 2019 1080p WEB-DL H264 AC3-EVO");
+            Assert.AreEqual("Men in Black International", torrent.Title);
+            Assert.AreEqual(2019, torrent.Year);
+            Assert.AreEqual("1080p", torrent.Resolution);
+            Assert.AreEqual("WEB-DL", torrent.Quality);
+            Assert.AreEqual("H264", torrent.Codec);
+            Assert.AreEqual("AC3", torrent.Audio);
+            Assert.AreEqual("EVO", torrent.Group);
         }
 
         [TestMethod]

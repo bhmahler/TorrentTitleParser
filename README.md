@@ -48,6 +48,17 @@ Simply create a new torrent object and pass the torrent title and all available 
 
 ````C#
 var torrent = new Torrent("Men in Black International 2019 1080p WEB-DL H264 AC3-EVO");
+/**
+torrent = {
+ Title = "Men in Black International,
+ Year = 2019,
+ Resolution = "1080p",
+ Quality = "WEB-DL",
+ Codec = "H264",
+ Audio = "AC3",
+ Group = "EVO"		
+}
+*/
 ````
 
 
