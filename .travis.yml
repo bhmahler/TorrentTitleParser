@@ -1,7 +1,8 @@
 language: csharp
 mono: none
-dotnet: 2.0.3
+dotnet: 2.2.401
 solution: TorrentTitleParser.sln
 script:
- - dotnet build
- - dotnet test TorrentTitleParser.Tests
+ - dotnet restore
+ - cd TorrentTitleParser.Tests
+ - dotnet test
