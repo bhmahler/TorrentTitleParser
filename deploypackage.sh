@@ -8,7 +8,7 @@ url="https://globalcdn.nuget.org/packages/$lower"
 echo $url
 status=$(curl --write-out %{http_code} --silent --output /dev/null $url)
 echo $status
-if [["$status" -eq 200]]; then
+if [ "$status" == "200" ]; then
 	echo "Version $version already found, skipping publish"
 	return 0;
 else 
