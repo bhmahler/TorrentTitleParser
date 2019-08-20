@@ -3,7 +3,7 @@ mono: none
 dotnet: 2.2.401
 solution: TorrentTitleParser.sln
 script:
- - dotnet build
+ - dotnet build --configuration Release
  - dotnet test TorrentTitleParser.Tests
 deploy:
  skip_cleanup: true
