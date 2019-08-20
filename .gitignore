@@ -1,3 +1,5 @@
-.vs/*
-bin/*
-obj/*
+_ReSharper.*
+.vs
+bin
+obj
+packages
