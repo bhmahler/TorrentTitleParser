@@ -9,8 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TorrentTitleParser.Tests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D95A516-062B-44AF-B433-388BDA3AFFD3}"
 	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
 		LICENSE = LICENSE
-		PushPackage.cmd = PushPackage.cmd
 		README.md = README.md
 	EndProjectSection
 EndProject

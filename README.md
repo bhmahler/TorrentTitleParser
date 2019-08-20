@@ -1,6 +1,8 @@
 # TorrentTitleParser
 > Library for parsing movie and tv show info from torrent names
 
+[![Build Status](https://travis-ci.org/bhmahler/TorrentTitleParser.svg?branch=master)](https://travis-ci.org/bhmahler/TorrentTitleParser) [![NuGet Badge](https://buildstats.info/nuget/TorrentTitleParser)](https://www.nuget.org/packages/TorrentTitleParser/) [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
 #### Possible Properties Parsed 
 
 - Amazon
@@ -30,9 +32,14 @@
 - Year
 
 ## Installation
-Torrent Title Parser can be installed via nuget package manager or via the console
+Torrent Title Parser can be installed via nuget package manager
+
 ````
-Install-Package TorrentTitleParser
+PM> Install-Package TorrentTitleParser -Version 1.0.0
+````
+OR via the .NET CLI
+````
+> dotnet add package TorrentTitleParser --version 1.0.0
 ````
 
 ## Usage
