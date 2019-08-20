@@ -5,3 +5,7 @@ solution: TorrentTitleParser.sln
 script:
  - cd TorrentTitleParser.Tests
  - dotnet test
+ deploy:
+  skip_cleanup: true
+  provider: script
+  script: dotnet nuget push TorrentTitleParser/bin/release/TorrentTitleParser.*.nupkg -k $NUGET_API_KEY -s $NUGET_SOURCE
