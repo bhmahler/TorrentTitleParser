@@ -4,5 +4,6 @@ dotnet: 2.2.401
 solution: TorrentTitleParser.sln
 script:
  - dotnet restore
+ - dotnet build
  - cd TorrentTitleParser.Tests
  - dotnet test
