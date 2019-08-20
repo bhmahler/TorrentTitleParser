@@ -3,9 +3,12 @@ mono: none
 dotnet: 2.2.401
 solution: TorrentTitleParser.sln
 script:
- - cd TorrentTitleParser.Tests
- - dotnet test
+ - dotnet build
+ - dotnet test TorrentTitleParser.Tests
 deploy:
  skip_cleanup: true
  provider: script
  script: dotnet nuget push TorrentTitleParser/bin/release/TorrentTitleParser.*.nupkg -k $NUGET_API_KEY -s $NUGET_SOURCE
+ on:
+  branch: master
+  condition: '"x${NUGET_API_KEY}" != "x" && "x$NUGET_SOURCE" != "x"'
