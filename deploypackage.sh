@@ -6,8 +6,9 @@ echo "Found version $version for publish, checking nuget.org..."
 lower=$(echo "$file" | tr '[:upper:]' '[:lower:]')
 url="https://globalcdn.nuget.org/packages/$lower"
 echo $url
-status=$(curl -o /dev/null -Isw '%{http_code}' $url)
-if [$status -eq "200"]; then
+status=$(curl --write-out %{http_code} --silent --output /dev/null $url)
+echo $status
+if [["$status" -eq 200]]; then
 	echo "Version $version already found, skipping publish"
 	return 0;
 else 
