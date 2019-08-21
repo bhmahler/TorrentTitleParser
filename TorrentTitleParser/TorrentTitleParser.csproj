@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Brian Mahler</Authors>
-    <Description>Library for parsing movei and tv info from torrent names</Description>
+    <Description>Library for parsing movie and tv info from torrent names</Description>
     <Copyright />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
