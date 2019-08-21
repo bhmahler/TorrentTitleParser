@@ -17,6 +17,8 @@
 - Group
 - HDR
 - Hard Coded
+- Is3D
+- MultipleLanguages
 - Name
 - Netflix
 - Proper
@@ -27,6 +29,7 @@
 - Repack
 - Resolution
 - Season
+- ThreeDFormat
 - Title
 - Website
 - Year
