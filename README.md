@@ -7,11 +7,13 @@
 
 - Amazon
 - Audio
+- Audio Channels
 - Bit Depth
 - Blurred
 - Codec
 - Complete
 - Container
+- Dolby Atmos
 - Episode
 - Extended
 - Group
@@ -31,6 +33,7 @@
 - Season
 - ThreeDFormat
 - Title
+- TrueHD
 - Website
 - Year
 
