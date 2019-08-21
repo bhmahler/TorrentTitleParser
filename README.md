@@ -12,11 +12,12 @@
 - Codec
 - Complete
 - Container
+- Dubbed
 - Episode
 - Extended
 - Group
-- HDR
 - Hard Coded
+- HDR
 - Is3D
 - MultipleLanguages
 - Name
