@@ -14,11 +14,12 @@
 - Complete
 - Container
 - Dolby Atmos
+- Dubbed
 - Episode
 - Extended
 - Group
-- HDR
 - Hard Coded
+- HDR
 - Is3D
 - MultipleLanguages
 - Name
