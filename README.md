@@ -35,11 +35,11 @@
 Torrent Title Parser can be installed via nuget package manager
 
 ````
-PM> Install-Package TorrentTitleParser -Version 1.0.0
+PM> Install-Package TorrentTitleParser
 ````
 OR via the .NET CLI
 ````
-> dotnet add package TorrentTitleParser --version 1.0.0
+> dotnet add package TorrentTitleParser
 ````
 
 ## Usage
