@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Dynamic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -39,7 +40,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"xvid|x26[45]|h\.?26[45]|hevc", Options = RegexOptions.IgnoreCase)]
         public string Codec { get; set; }
 
-        [Pattern(Regex = @"MP3|DDP?\+?[57][\.\s]?1|Dual[\- ]Audio|LiNE|D[Tt][Ss](?:-?6[Cc][Hh])?(?:-?HD)?(?: ?MA)?(?:[\.\s]?[567][\.\s]?1)?|AAC(?:\.?2\.0)?|AC3(?:[\.\s]5[\.\s]1)?|ATMOS TrueHD(?:\s?7\s1)?")]
+        [Pattern(Regex = @"MP3|DDP?\+?[57][\.\s]?1|Dual[\- ]Audio|LiNE|D[Tt][Ss](?:-?6[Cc][Hh])?(?:-?HD)?(?: ?MA)?(?:[\.\s]?[567][\.\s]?1)?|AAC(?:\.?2\.0)?|[Aa][Cc]3(?:\s?DD)?(?:[\.\s]?[752][\.\s][10])?|ATMOS TrueHD(?:\s?7\s1)?")]
         public string Audio { get; set; }
 
         [Pattern(Regex = @"(- ?(?:.+\])?([^-\[]+)(?:\[.+\])?)$", AlternateRegex = @"(([A-Za-z0-9]+))$")]
@@ -69,11 +70,17 @@ namespace TorrentTitleParser
         [Pattern(Regex = "BLURRED")]
         public bool Blurred { get; set; }
 
+        [Pattern(Regex = "MULT[iI]-?(?:[0-9]+)?")]
+        public bool MultipleLanguages { get; set; }
+
         [Pattern(Regex = "COMPLETE")]
         public bool Complete { get; set; }
 
         [Pattern(Regex = "REMASTERED")]
         public bool Remastered { get; set; }
+
+        [Pattern(Regex = "DUBBED")]
+        public bool Dubbed { get; set; }
 
         [Pattern(Regex = "AMZN")]
         public bool Amazon { get; set; }
@@ -81,13 +88,19 @@ namespace TorrentTitleParser
         [Pattern(Regex = "NF")]
         public bool Netflix { get; set; }
 
+        [Pattern(Regex = "([^A-Za-z0-9](3D)[^A-Za-z0-9])")]
+        public bool Is3D { get; set; }
+
+        [Pattern(Regex = @"(?:full|half)[-\s](?:sbs|ou)", Options = RegexOptions.IgnoreCase)]
+        public string ThreeDFormat { get; set; }
+
         [Pattern(Regex = @"MKV|AVI|MP4|mkv|avi|mp4")]
         public string Container { get; set; }
 
         [Pattern(Regex = @"^(\[ ?([^\]]+?) ?\])")]
         public string Website { get; set; }
 
-        [Pattern(Regex = @"1400Mb|3rd Nov| ((Rip))| \[no rar\]")]
+        [Pattern(Regex = @"1400Mb|3rd Nov| ((Rip))| \[no rar\]|[\[\(]?[Rr][Ee][Qq][\]\)]?[\s\.]?")]
         public string Garbage { get; set; }
 
         public string Title { get; set; }
@@ -140,8 +153,7 @@ namespace TorrentTitleParser
                     if (match.Index == 0)
                     {
                         start = match.Groups[0].Length;
-                    }
-                    if (match.Index < end)
+                    } else if (match.Index < end)
                     {
                         end = match.Index;
                     }
@@ -154,7 +166,7 @@ namespace TorrentTitleParser
                 clean = Regex.Replace(clean, @"\.", " ");
             }
             clean = Regex.Replace(clean, "_", " ");
-            clean = Regex.Replace(clean, @"([\(_]|- )$", "").Trim();
+            clean = Regex.Replace(clean, @"([\(_]|- ?)$", "").Trim();
             Title = clean;
             Name = name;
         }

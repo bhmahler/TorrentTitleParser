@@ -52,6 +52,69 @@ namespace TorrentTitleParser.Tests
             Assert.AreEqual("H264", torrent.Codec);
             Assert.AreEqual("Dts-6Ch", torrent.Audio);
             Assert.AreEqual("PiR8", torrent.Group);
+
+            torrent = new Torrent("Avengers Endgame 2019 3D 1080p BluRay x264-GUACAMOLE");
+            Assert.AreEqual("Avengers Endgame", torrent.Title);
+            Assert.AreEqual(2019, torrent.Year);
+            Assert.IsTrue(torrent.Is3D);
+            Assert.AreEqual("1080p", torrent.Resolution);
+            Assert.AreEqual("BluRay", torrent.Quality);
+            Assert.AreEqual("x264", torrent.Codec);
+            Assert.AreEqual("GUACAMOLE", torrent.Group);
+
+            torrent = new Torrent("Solo A Star Wars Story 2018 1080p 3D BluRay BluRay Half-SBS x264 DTS-HD MA 7 1-FGT");
+            Assert.AreEqual("Solo A Star Wars Story", torrent.Title);
+            Assert.AreEqual(2018, torrent.Year);
+            Assert.AreEqual("1080p", torrent.Resolution);
+            Assert.IsTrue(torrent.Is3D);
+            Assert.AreEqual("Half-SBS", torrent.ThreeDFormat);
+            Assert.AreEqual("BluRay", torrent.Quality);
+            Assert.AreEqual("x264", torrent.Codec);
+            Assert.AreEqual("DTS-HD MA 7 1", torrent.Audio);
+            Assert.AreEqual("FGT", torrent.Group);
+
+            torrent = new Torrent("Iron Man 2008 MULTi 2160p UHD BluRay x265-SESKAPiLE");
+            Assert.AreEqual("Iron Man", torrent.Title);
+            Assert.AreEqual(2008, torrent.Year);
+            Assert.AreEqual("2160p", torrent.Resolution);
+            Assert.IsTrue(torrent.MultipleLanguages);
+            Assert.AreEqual("UHD BluRay", torrent.Quality);
+            Assert.AreEqual("x265", torrent.Codec);
+            Assert.AreEqual("SESKAPiLE", torrent.Group);
+
+            torrent = new Torrent("Pokemon Detective Pikachu 2019 PROPER MULTi 2160p UHD BluRay x265-OohLaLa");
+            Assert.AreEqual("Pokemon Detective Pikachu", torrent.Title);
+            Assert.AreEqual(2019, torrent.Year);
+            Assert.IsTrue(torrent.Proper);
+            Assert.IsTrue(torrent.MultipleLanguages);
+            Assert.AreEqual("2160p", torrent.Resolution);
+            Assert.AreEqual("UHD BluRay", torrent.Quality);
+            Assert.AreEqual("x265", torrent.Codec);
+            Assert.AreEqual("OohLaLa", torrent.Group);
+
+            torrent = new Torrent("(REQ) Return Of The Living Dead Necropolis 2005 H264 AC3 DD2 0 Will1869");
+            Assert.AreEqual("Return Of The Living Dead Necropolis", torrent.Title);
+            Assert.AreEqual(2005, torrent.Year);
+            Assert.AreEqual("H264", torrent.Codec);
+            Assert.AreEqual("AC3 DD2 0", torrent.Audio);
+            Assert.AreEqual("Will1869", torrent.Group);
+
+            torrent = new Torrent("[REQ] Three Wishes 1995 DVDRip X264 Ac3 SNAKE");
+            Assert.AreEqual("Three Wishes", torrent.Title);
+            Assert.AreEqual(1995, torrent.Year);
+            Assert.AreEqual("DVDRip", torrent.Quality);
+            Assert.AreEqual("X264", torrent.Codec);
+            Assert.AreEqual("Ac3", torrent.Audio);
+            Assert.AreEqual("SNAKE", torrent.Group);
+
+            torrent = new Torrent("Where The Red Fern Grows-1974-X264-AAC-BigTimeCube");
+            Assert.AreEqual("Where The Red Fern Grows", torrent.Title);
+            Assert.AreEqual(1974, torrent.Year);
+            Assert.AreEqual("X264", torrent.Codec);
+            Assert.AreEqual("AAC", torrent.Audio);
+            Assert.AreEqual("BigTimeCube", torrent.Group);
+
+
         }
 
         [TestMethod]
