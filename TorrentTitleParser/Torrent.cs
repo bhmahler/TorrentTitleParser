@@ -1,11 +1,7 @@
-﻿using TorrentTitleParser.Attributes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Dynamic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
+using TorrentTitleParser.Attributes;
 
 namespace TorrentTitleParser
 {
@@ -22,7 +18,7 @@ namespace TorrentTitleParser
         public bool Amazon { get; set; }
 
 
-        [Pattern(Regex = @"MP3|DDP?\+?|Dual[\- ]Audio|LiNE|D[Tt][Ss](?:-?6[Cc][Hh])?(?:-?HD)?(?:[ \.]?MA)?|AAC(?:\.?2\.0)?|[Aa][Cc]3(?:\s?DD)?",
+        [Pattern(Regex = @"MP3|DDP?\+?|Dual[\- ]Audio|LiNE|D[Tt][Ss](?:-?6[Cc][Hh])?(?:-?HD)?(?:[ \.]?MA)?|AAC(?:\.?2\.0)?|[Aa][Cc]-?3(?:\s?DD)?",
             Replacements = "., ")]
         public string Audio { get; set; }
 
@@ -30,7 +26,7 @@ namespace TorrentTitleParser
         public string AudioChannels { get; set; }
 
         [Pattern(Regex = @"((\d+)\s?bit)", Options = RegexOptions.IgnoreCase)]
-        public int BitDepth { get; set; }
+        public int? BitDepth { get; set; }
 
         [Pattern(Regex = "BLURRED")] 
         public bool Blurred { get; set; }
@@ -51,7 +47,7 @@ namespace TorrentTitleParser
         public bool Dubbed { get; set; }
 
         [Pattern(Regex = @"([Eex]([0-9]{2})(?:[^0-9]|$))")]
-        public int Episode { get; set; }
+        public int? Episode { get; set; }
 
         [Pattern(Regex = "EXTENDED")] 
         public bool Extended { get; set; }
@@ -82,7 +78,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = "PROPER")] 
         public bool Proper { get; set; }
 
-        [Pattern(Regex = @"(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DrR]R[iI][pP][sS]?|TS|(?:PPV )?WEB-?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|[Bb]lu ?[Rr]ay|DvDScr|hdtv|UHD(?: B[Ll][Uu]R[Aa][Yy])")]
+        [Pattern(Regex = @"(?:PPV\.)?[HP]DTV|(?:HD)?CAM|B[DrR]R[iI][pP][sS]?|TS|(?:PPV )?WEB[- ]?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|CamRip|W[EB]B[rR]ip|[Bb]lu[ -]?[Rr]ay|DvDScr|hdtv|UHD(?: B[Ll][Uu][- ]?[Rr][Aa][Yy])")]
         public string Quality { get; set; }
 
         [Pattern(Regex = @"R[0-9]")] 
@@ -101,7 +97,7 @@ namespace TorrentTitleParser
         public string Resolution { get; set; }
 
         [Pattern(Regex = @"([Ss]([0-9]{1,2}))[Eex\s]")]
-        public int Season { get; set; }
+        public int? Season { get; set; }
 
         [Pattern(Regex = @"(?:full|half)[-\s](?:sbs|ou)", Options = RegexOptions.IgnoreCase)]
         public string ThreeDFormat { get; set; }
@@ -157,7 +153,7 @@ namespace TorrentTitleParser
                     {
                         var cleanIndex = match.Groups.Count > 1 ? 2 : 0;
                         clean = match.Groups[cleanIndex].Value;
-                        if (prop.PropertyType == typeof(int))
+                        if (prop.PropertyType == typeof(int) || prop.PropertyType == typeof(int?))
                         {
                             prop.SetValue(this, int.Parse(clean));
                         }

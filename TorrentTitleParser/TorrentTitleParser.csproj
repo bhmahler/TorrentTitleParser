@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,8 +9,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.3</Version>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
     <PackageReleaseNotes>• Added Audio Channels to parsed properties
 • Added Dolby Atmos to parsed properties
 • Added TrueHD to parsed properties
@@ -19,7 +19,7 @@
 • Updated pattern attribute to support text replacements within match
 • Updated audio codec parsing and removed flags and channels from codec
 • Updated existing tests for added parsed properties</PackageReleaseNotes>
-    <FileVersion>1.0.3.0</FileVersion>
+    <FileVersion>1.0.4.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,5 +28,9 @@
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /d bin\Release\*.nupkg C:\LocalNugetRepo" />
+  </Target>
 
 </Project>
