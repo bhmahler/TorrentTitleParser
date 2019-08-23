@@ -29,8 +29,4 @@
     </None>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /d bin\Release\*.nupkg C:\LocalNugetRepo" />
-  </Target>
-
 </Project>
