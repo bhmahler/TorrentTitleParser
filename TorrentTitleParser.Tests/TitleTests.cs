@@ -8,6 +8,19 @@ namespace TorrentTitleParser.Tests
     public class TitleTests
     {
         [TestMethod]
+        public void ManualTest()
+        {
+            var settings = new JsonSerializerSettings
+            {
+                DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            };
+            var torrent = new Torrent("Fortress.2.Snipers.Eye.2022.1080p.WEBRip.DD5.1.X.264-EVO");
+            Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, settings));
+            Assert.IsTrue(true);
+        }
+
+        [TestMethod]
         public void TestMovieTitles()
         {
             var settings = new JsonSerializerSettings

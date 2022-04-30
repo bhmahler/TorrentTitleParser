@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net6.0;netstandard2.1;</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Brian Mahler</Authors>
     <Description>Library for parsing movie and tv info from torrent names</Description>
@@ -9,17 +9,19 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <PackageReleaseNotes>• Added Audio Channels to parsed properties
-• Added Dolby Atmos to parsed properties
-• Added TrueHD to parsed properties
-• Added additional tests for alternative torrent formats
-• Improved various matching patterns
-• Updated pattern attribute to support text replacements within match
-• Updated audio codec parsing and removed flags and channels from codec
-• Updated existing tests for added parsed properties</PackageReleaseNotes>
-    <FileVersion>1.0.4.0</FileVersion>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <PackageReleaseNotes>
+		• Upgraded project to .NET 6
+		• Added Audio Channels to parsed properties
+		• Added Dolby Atmos to parsed properties
+		• Added TrueHD to parsed properties
+		• Added additional tests for alternative torrent formats
+		• Improved various matching patterns
+		• Updated pattern attribute to support text replacements within match
+		• Updated audio codec parsing and removed flags and channels from codec
+		• Updated existing tests for added parsed properties</PackageReleaseNotes>
+    <FileVersion>1.0.5.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
