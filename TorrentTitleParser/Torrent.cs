@@ -113,7 +113,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"^(\[ ?([^\]]+?) ?\])")]
         public string Website { get; set; }
 
-        [Pattern(Regex = @"([\[\(]?((?:19[0-9]|20[0-9])[0-9])[\]\)]?)")]
+        [Pattern(Regex = @"([\[\(]?((?:19[0-9][0-9]|20[0-9])[0-9])[\]\)]?)")]
         public int Year { get; set; }
 
         /// <summary>
@@ -191,8 +191,11 @@ namespace TorrentTitleParser
                         }
                     }
                 }
-
+#if NETSTANDARD2_0
+                var raw = name.Substring(start, end - start).Split('(')[0];
+#else
                 var raw = name[start..end].Split('(')[0];
+#endif
                 clean = Regex.Replace(raw, @"^ -", "");
                 if (clean.IndexOf(' ') == -1 && clean.IndexOf('.') != -1)
                 {

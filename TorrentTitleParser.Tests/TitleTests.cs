@@ -15,7 +15,7 @@ namespace TorrentTitleParser.Tests
                 DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             };
-            var torrent = new Torrent("Fortress.2.Snipers.Eye.2022.1080p.WEBRip.DD5.1.X.264-EVO");
+            var torrent = new Torrent("Halo.S01E02.iNTERNAL.1080p.HEVC.x265-MeGusta");
             Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, settings));
             Assert.IsTrue(true);
         }
