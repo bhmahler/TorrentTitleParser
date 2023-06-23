@@ -48,6 +48,6 @@ jobs:
       - name: Setup .Nuget
         uses: NuGet/setup-nuget@v1.2.0
       - name: Publish Nuget Package
-        run: nuget push **\*.nupkg --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: nuget push **\*.nupkg -ApiKey "${{ secrets.NUGET_APIKEY }}" -Source https://api.nuget.org/v3/index.json -SkipDuplicate
           
     
