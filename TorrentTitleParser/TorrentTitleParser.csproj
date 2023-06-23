@@ -9,9 +9,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.6</Version>
-    <PackageReleaseNotes>• Added support for .NET 7 and .NET Stnadard 2.0
-• Fixed issue with year parsing for years starting with 19</PackageReleaseNotes>
+    <Version>1.0.7</Version>
+    <PackageReleaseNotes>• Fixed issue with parsing torrent quality</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 

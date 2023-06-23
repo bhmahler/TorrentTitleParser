@@ -28,7 +28,17 @@ namespace TorrentTitleParser.Tests
                 DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             };
-            var torrent = new Torrent("Iron Man 3 2013 REMASTERED 2160p UHD BluRay X265-IAMABLE");
+
+            var torrent = new Torrent("The Flash 2023 1080p V2 Cam X264 Will1869");
+            Assert.AreEqual("The Flash", torrent.Title);
+            Assert.AreEqual(2023, torrent.Year);
+            Assert.AreEqual("1080p", torrent.Resolution);
+            Assert.AreEqual("Cam", torrent.Quality);
+            Assert.AreEqual("X264", torrent.Codec);
+            Assert.AreEqual("Will1869", torrent.Group);
+
+
+            torrent = new Torrent("Iron Man 3 2013 REMASTERED 2160p UHD BluRay X265-IAMABLE");
             Assert.AreEqual("Iron Man 3", torrent.Title);
             Assert.AreEqual(2013, torrent.Year);
             Assert.IsTrue(torrent.Remastered);
