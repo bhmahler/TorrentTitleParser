@@ -1,7 +1,7 @@
 # TorrentTitleParser
 > Library for parsing movie and tv show info from torrent names
 
-[![Build Status](https://travis-ci.org/bhmahler/TorrentTitleParser.svg?branch=master)](https://travis-ci.org/bhmahler/TorrentTitleParser) [![NuGet Badge](https://buildstats.info/nuget/TorrentTitleParser)](https://www.nuget.org/packages/TorrentTitleParser/) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
+[![.NET](https://github.com/bhmahler/TorrentTitleParser/actions/workflows/dotnet.yml/badge.svg)](https://github.com/bhmahler/TorrentTitleParser/actions/workflows/dotnet.yml) [![NuGet Badge](https://buildstats.info/nuget/TorrentTitleParser)](https://www.nuget.org/packages/TorrentTitleParser/) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
 #### Possible Properties Parsed 
 
 - Amazon
