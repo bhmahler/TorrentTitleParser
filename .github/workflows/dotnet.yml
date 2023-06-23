@@ -26,7 +26,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build -c Release TorrentTitleParser.sln--no-restore
+      run: dotnet build -c Release TorrentTitleParser.sln --no-restore
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
