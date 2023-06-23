@@ -45,11 +45,11 @@ jobs:
         with:
           name: nuget
           path: ${{ env.NuGetDirectory }}
-      - name: Setup .Net Core
-        uses: actions/setup-dotnet@v3
+      - name: Setup .Nuget
+        uses: NuGet/setup-nuget@v1.2.0
       - name: Publish Nuget Package
         run: |
-          foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          foreach($nugetFile in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
+              nuget push **\*.nupkg --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
           }
     
