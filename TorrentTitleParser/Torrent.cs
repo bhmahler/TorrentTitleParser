@@ -113,7 +113,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"^(\[ ?([^\]]+?) ?\])")]
         public string Website { get; set; }
 
-        [Pattern(Regex = @"([\[\(]?((?:19[0-9][0-9]|20[0-9])[0-9])[\]\)]?)")]
+        [Pattern(Regex = @"([\[\(]?((?:19|20)[0-9]{2})[\]\)]?)")]
         public int Year { get; set; }
 
         /// <summary>
