@@ -258,5 +258,12 @@ namespace TorrentTitleParser.Tests
             Assert.AreEqual("HEVC", torrent.Codec);
             Assert.AreEqual("NEOLUTiON", torrent.Group);
         }
+
+        [TestMethod]
+        public void TestOddTitle()
+        {
+            var torrent = new Torrent("Saving Private Ryan 1998 720p BDRip DD5 1 x264-ITSat");
+            Assert.AreEqual("Saving Private Ryan", torrent.Title);
+        }
     }
 }

@@ -9,7 +9,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <PackageReleaseNotes>• Fixed issue with parsing torrent quality</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>

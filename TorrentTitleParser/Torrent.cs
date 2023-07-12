@@ -37,7 +37,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = "COMPLETE")] 
         public bool Complete { get; set; }
 
-        [Pattern(Regex = @"MKV|AVI|MP4|mkv|avi|mp4")]
+        [Pattern(Regex = @"[\s\.-](MKV|AVI|MP4|mkv|avi|mp4)")]
         public string Container { get; set; }
 
         [Pattern(Regex = @"ATMOS|Atmos\b")]
