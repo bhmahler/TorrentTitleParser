@@ -130,7 +130,7 @@ namespace TorrentTitleParser
 
         public void ParseInfo(string name)
         {
-            var end = int.MaxValue;
+            var end = name.Length;
             var start = 0;
             var clean = "";
 

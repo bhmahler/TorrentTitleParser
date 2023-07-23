@@ -15,7 +15,7 @@ namespace TorrentTitleParser.Tests
                 DefaultValueHandling = DefaultValueHandling.Ignore,
                 NullValueHandling = NullValueHandling.Ignore
             };
-            var torrent = new Torrent("Halo.S01E02.iNTERNAL.1080p.HEVC.x265-MeGusta");
+            var torrent = new Torrent("Futurama Complete [jlw][plexO]");
             Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, settings));
             Assert.IsTrue(true);
         }
