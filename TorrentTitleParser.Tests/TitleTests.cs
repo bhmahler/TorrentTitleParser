@@ -21,6 +21,15 @@ namespace TorrentTitleParser.Tests
         }
 
         [TestMethod]
+        public void TestTS ()
+        {
+            var torrent = new Torrent("Inside Out 2 2024 1080p TELESYNC x264 COLLECTiVE");
+            Assert.AreEqual("TELESYNC", torrent.Quality);
+            torrent = new Torrent("Inside Out 2 2024 V2 HDTS c1nem4 x264-SUNSCREEN");
+            Assert.AreEqual("TS", torrent.Quality);
+        }
+
+        [TestMethod]
         public void TestMovieTitles()
         {
             var settings = new JsonSerializerSettings
