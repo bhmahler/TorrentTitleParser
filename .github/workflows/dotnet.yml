@@ -15,7 +15,7 @@ env:
   NuGetDirectory: ${{ github.workspace}}/nuget
   
 jobs:
-  create_nuget:
+  create:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -39,8 +39,8 @@ jobs:
         if-no-files-found: error
         retention-days: 7
         path: ${{ env.NuGetDirectory }}
-  deploy:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: ubuntu-22.04
     needs: [create_nuget]
     steps:
       - uses: actions/download-artifact@v4
@@ -50,7 +50,7 @@ jobs:
       - name: Setup .Nuget
         uses: NuGet/setup-nuget@v2.0.1
       - name: Publish Nuget Package
-        run: nuget push "${{ env.NuGetDirectory }}\*.nupkg" -Source https://api.nuget.org/v3/index.json -ApiKey ${GITHUB_TOKEN} -SkipDuplicate
+        run: nuget push "${{ env.NuGetDirectory }}/*.nupkg" -Source https://api.nuget.org/v3/index.json -ApiKey ${GITHUB_TOKEN} -SkipDuplicate
         env:
           GITHUB_TOKEN: ${{ secrets.NUGET_APIKEY}}
           
