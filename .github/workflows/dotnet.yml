@@ -15,7 +15,7 @@ env:
   NuGetDirectory: ${{ github.workspace}}/nuget
   
 jobs:
-  create:
+  build:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v4
@@ -41,7 +41,7 @@ jobs:
         path: ${{ env.NuGetDirectory }}
   publish:
     runs-on: ubuntu-22.04
-    needs: [create_nuget]
+    needs: [build]
     steps:
       - uses: actions/download-artifact@v4
         with:
