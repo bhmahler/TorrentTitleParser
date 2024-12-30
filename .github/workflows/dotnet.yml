@@ -50,8 +50,8 @@ jobs:
       - name: Setup .Nuget
         uses: NuGet/setup-nuget@v2.0.1
       - name: Publish Nuget Package
-        run: nuget push **\*.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey ${GITHUB_TOKEN} -SkipDuplicate
+        run: nuget push "${{ env.NuGetDirectory }}\*.nupkg" -Source https://api.nuget.org/v3/index.json -ApiKey ${GITHUB_TOKEN} -SkipDuplicate
         env:
-          GITHUB_TOKEN: ${{ secrets.NUGET_APILEY}}
+          GITHUB_TOKEN: ${{ secrets.NUGET_APIKEY}}
           
     
