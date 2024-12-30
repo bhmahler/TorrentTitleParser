@@ -30,6 +30,14 @@ namespace TorrentTitleParser.Tests
         }
 
         [TestMethod]
+        public void TestNumericalTitle ()
+        {
+            var torrent = new Torrent("1923 S01E01 2022 1080p x264 meGusta");
+            Assert.AreEqual("1923", torrent.Title);
+            Assert.AreEqual(2022, torrent.Year);
+        }
+
+        [TestMethod]
         public void TestMovieTitles()
         {
             var settings = new JsonSerializerSettings
