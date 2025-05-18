@@ -78,7 +78,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = "PROPER")] 
         public bool Proper { get; set; }
 
-        [Pattern(Regex = @"(?:PPV\.)?[HP]DTV|(?:HD)?C[Aa][Mm]|B[DrR]R[iI][pP][sS]?|TS|(?:PPV )?WEB[- ]?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|TELESYNC|CamRip|W[EB]B[rR]ip|[Bb]lu[ -]?[Rr]ay|DvDScr|hdtv|UHD(?: B[Ll][Uu][- ]?[Rr][Aa][Yy])")]
+        [Pattern(Regex = @"(?:PPV\.)?[HP]DTV|(?:HD)?C[Aa][Mm]|B[DrR]R[iI][pP][sS]?|TS|(?:PPV )?WEB[- ]?DL(?: DVDRip)?|H[dD]Rip|DVDRip|DVDRiP|DVDRIP|[Tt][Ee][Ll][Ee][Ss][Yy][Nn][Cc]|CamRip|W[EB]B[rR]ip|[Bb]lu[ -]?[Rr]ay|DvDScr|hdtv|UHD(?: B[Ll][Uu][- ]?[Rr][Aa][Yy])")]
         public string Quality { get; set; }
 
         [Pattern(Regex = @"R[0-9]")] 

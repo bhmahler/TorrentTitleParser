@@ -27,6 +27,9 @@ namespace TorrentTitleParser.Tests
             Assert.AreEqual("TELESYNC", torrent.Quality);
             torrent = new Torrent("Inside Out 2 2024 V2 HDTS c1nem4 x264-SUNSCREEN");
             Assert.AreEqual("TS", torrent.Quality);
+            torrent = new Torrent("Sinners 2025 1080p TeleSync X264 COLLECTiVE");
+            Assert.AreEqual("TeleSync", torrent.Quality);
+
         }
 
         [TestMethod]
