@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using TorrentTitleParser.Attributes;
@@ -122,6 +123,13 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"1400Mb|3rd Nov| ((Rip))| \[no rar\]|[\[\(]?[Rr][Ee][Qq][\]\)]?")]
         public string Garbage { get; set; }
 
+        public bool IsPreRelease =>
+            Quality != null &&
+            (Quality.Equals("telesync", StringComparison.InvariantCultureIgnoreCase) ||
+            Quality.Equals("hdts", StringComparison.InvariantCultureIgnoreCase) ||
+            Quality.Equals("ts", StringComparison.InvariantCultureIgnoreCase) ||
+            Quality.Contains("cam", StringComparison.InvariantCultureIgnoreCase));
+                
 
         public override string ToString()
         {
