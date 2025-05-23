@@ -266,6 +266,35 @@ namespace TorrentTitleParser.Tests
             Assert.IsTrue(torrent.IsPreRelease);
 
             Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, JsonSettings));
+
+            torrent = new Torrent("Fountain Of Youth 2025 2160p HDR10Plus DV WEBRip 6CH X265 HEVC-PSA");
+            Assert.AreEqual("Fountain Of Youth", torrent.Title);
+            Assert.AreEqual(2025, torrent.Year);
+            Assert.AreEqual("2160p", torrent.Resolution);
+            Assert.IsTrue(torrent.HDR);
+            Assert.IsTrue(torrent.DolbyVision);
+            Assert.AreEqual("WEBRip", torrent.Quality);
+            Assert.AreEqual("6", torrent.AudioChannels);
+            Assert.AreEqual("X265", torrent.Codec);
+            Assert.AreEqual("PSA", torrent.Group);
+
+            Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, JsonSettings));
+
+            torrent = new Torrent(
+                "Lord of War 2005 2160p UHD BluRay REMUX HEVC Dolby Vision TrueHD Atmos 7 1-FraMeSToR");
+            Assert.AreEqual("Lord of War", torrent.Title);
+            Assert.AreEqual(2005, torrent.Year);
+            Assert.AreEqual("2160p", torrent.Resolution);
+            Assert.IsTrue(torrent.Remux);
+            Assert.AreEqual("UHD BluRay", torrent.Quality);
+            Assert.AreEqual("HEVC", torrent.Codec);
+            Assert.IsTrue(torrent.DolbyVision);
+            Assert.IsTrue(torrent.TrueHD);
+            Assert.IsTrue(torrent.DolbyAtmos);
+            Assert.AreEqual("7.1", torrent.AudioChannels);
+            Assert.AreEqual("FraMeSToR", torrent.Group);
+
+            Trace.WriteLine(JsonConvert.SerializeObject(torrent, Formatting.Indented, JsonSettings));
         }
 
         [TestMethod]

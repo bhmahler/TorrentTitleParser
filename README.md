@@ -13,6 +13,7 @@
 - Complete
 - Container
 - Dolby Atmos
+- Dolby Vision
 - Dubbed
 - Episode
 - Extended

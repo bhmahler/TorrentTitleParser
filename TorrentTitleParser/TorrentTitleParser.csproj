@@ -9,8 +9,9 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/bhmahler/TorrentTitleParser</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <Version>1.0.13</Version>
-    <PackageReleaseNotes>• Added IsPreRelease property for all pre production release torrents (e.g. Cam, TeleSync etc.)</PackageReleaseNotes>
+    <Version>1.0.14</Version>
+    <PackageReleaseNotes>• Added DolbyVision flag
+• Updated Audio Channels to support more formats</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/bhmahler/TorrentTitleParser</PackageProjectUrl>
   </PropertyGroup>

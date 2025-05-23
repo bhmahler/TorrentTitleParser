@@ -23,7 +23,7 @@ namespace TorrentTitleParser
             Replacements = "., ")]
         public string Audio { get; set; }
 
-        [Pattern(Regex = @"[257][\s\.][01]", Replacements = " ,.")]
+        [Pattern(Regex = @"[257][\s\.][01]|[2567][\s\.]?[01]?[Cc][Hh]", Replacements = " ,.|CH,|Ch,|ch,|cH,")]
         public string AudioChannels { get; set; }
 
         [Pattern(Regex = @"((\d+)\s?bit)", Options = RegexOptions.IgnoreCase)]
@@ -44,6 +44,9 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"ATMOS|Atmos\b")]
         public bool DolbyAtmos { get; set; }
 
+        [Pattern(Regex = @"[Dd]olby\s?[Vv]ision|[Dd][Vv]")]
+        public bool DolbyVision { get; set; }
+
         [Pattern(Regex = "DUBBED")] 
         public bool Dubbed { get; set; }
 
@@ -56,7 +59,7 @@ namespace TorrentTitleParser
         [Pattern(Regex = @"(- ?(?:.+\])?([^-\[]+)(?:\[.+\])?)$", AlternateRegex = @"(([A-Za-z0-9]+))$")]
         public string Group { get; set; }
 
-        [Pattern(Regex = @"HDR(?:\s?10)?(?:[\s\.\]])")] 
+        [Pattern(Regex = @"HDR(?:\s?10)?([Pp]lus)?(?:[\s\.\]])")] 
         public bool HDR { get; set; }
 
         [Pattern(Regex = "HC")] 
